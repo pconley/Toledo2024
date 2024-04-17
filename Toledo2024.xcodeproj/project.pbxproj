@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43098B572BCD886D00D3F2F7 /* Toledo2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B562BCD886D00D3F2F7 /* Toledo2024App.swift */; };
+		43098B592BCD886D00D3F2F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B582BCD886D00D3F2F7 /* ContentView.swift */; };
+		43098B5B2BCD886F00D3F2F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43098B5A2BCD886F00D3F2F7 /* Assets.xcassets */; };
+		43098B5E2BCD886F00D3F2F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43098B5D2BCD886F00D3F2F7 /* Preview Assets.xcassets */; };
+		43098B692BCD887000D3F2F7 /* Toledo2024Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B682BCD887000D3F2F7 /* Toledo2024Tests.swift */; };
+		43098B732BCD887000D3F2F7 /* Toledo2024UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B722BCD887000D3F2F7 /* Toledo2024UITests.swift */; };
+		43098B752BCD887000D3F2F7 /* Toledo2024UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B742BCD887000D3F2F7 /* Toledo2024UITestsLaunchTests.swift */; };
+		43098B832BCD89CC00D3F2F7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B822BCD89CC00D3F2F7 /* Task.swift */; };
+		43098B852BCD8CDF00D3F2F7 /* TaskGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B842BCD8CDF00D3F2F7 /* TaskGroup.swift */; };
+		43098B872BCD8F0000D3F2F7 /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B862BCD8F0000D3F2F7 /* TaskSection.swift */; };
+		43098B892BCDA77900D3F2F7 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B882BCDA77900D3F2F7 /* SidebarView.swift */; };
+		43098B8B2BCDA7A200D3F2F7 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */; };
+		43853D812BCFE35A002C9B79 /* StaticTaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */; };
+		43853D832BCFE6BF002C9B79 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D822BCFE6BF002C9B79 /* TaskView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43098B652BCD887000D3F2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43098B4B2BCD886D00D3F2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43098B522BCD886D00D3F2F7;
+			remoteInfo = Toledo2024;
+		};
+		43098B6F2BCD887000D3F2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43098B4B2BCD886D00D3F2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43098B522BCD886D00D3F2F7;
+			remoteInfo = Toledo2024;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43098B532BCD886D00D3F2F7 /* Toledo2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toledo2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43098B562BCD886D00D3F2F7 /* Toledo2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toledo2024App.swift; sourceTree = "<group>"; };
+		43098B582BCD886D00D3F2F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43098B5A2BCD886F00D3F2F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43098B5D2BCD886F00D3F2F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43098B5F2BCD886F00D3F2F7 /* Toledo2024.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Toledo2024.entitlements; sourceTree = "<group>"; };
+		43098B642BCD887000D3F2F7 /* Toledo2024Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toledo2024Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43098B682BCD887000D3F2F7 /* Toledo2024Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toledo2024Tests.swift; sourceTree = "<group>"; };
+		43098B6E2BCD887000D3F2F7 /* Toledo2024UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toledo2024UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43098B722BCD887000D3F2F7 /* Toledo2024UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toledo2024UITests.swift; sourceTree = "<group>"; };
+		43098B742BCD887000D3F2F7 /* Toledo2024UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toledo2024UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		43098B822BCD89CC00D3F2F7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		43098B842BCD8CDF00D3F2F7 /* TaskGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroup.swift; sourceTree = "<group>"; };
+		43098B862BCD8F0000D3F2F7 /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
+		43098B882BCDA77900D3F2F7 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTaskListView.swift; sourceTree = "<group>"; };
+		43853D822BCFE6BF002C9B79 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43098B502BCD886D00D3F2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B612BCD887000D3F2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B6B2BCD887000D3F2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43098B4A2BCD886D00D3F2F7 = {
+			isa = PBXGroup;
+			children = (
+				43098B552BCD886D00D3F2F7 /* Toledo2024 */,
+				43098B672BCD887000D3F2F7 /* Toledo2024Tests */,
+				43098B712BCD887000D3F2F7 /* Toledo2024UITests */,
+				43098B542BCD886D00D3F2F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43098B542BCD886D00D3F2F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43098B532BCD886D00D3F2F7 /* Toledo2024.app */,
+				43098B642BCD887000D3F2F7 /* Toledo2024Tests.xctest */,
+				43098B6E2BCD887000D3F2F7 /* Toledo2024UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43098B552BCD886D00D3F2F7 /* Toledo2024 */ = {
+			isa = PBXGroup;
+			children = (
+				43098B562BCD886D00D3F2F7 /* Toledo2024App.swift */,
+				43098B582BCD886D00D3F2F7 /* ContentView.swift */,
+				43098B882BCDA77900D3F2F7 /* SidebarView.swift */,
+				43853D822BCFE6BF002C9B79 /* TaskView.swift */,
+				43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */,
+				43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */,
+				43098B812BCD895600D3F2F7 /* Model */,
+				43098B5A2BCD886F00D3F2F7 /* Assets.xcassets */,
+				43098B5F2BCD886F00D3F2F7 /* Toledo2024.entitlements */,
+				43098B5C2BCD886F00D3F2F7 /* Preview Content */,
+			);
+			path = Toledo2024;
+			sourceTree = "<group>";
+		};
+		43098B5C2BCD886F00D3F2F7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				43098B5D2BCD886F00D3F2F7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43098B672BCD887000D3F2F7 /* Toledo2024Tests */ = {
+			isa = PBXGroup;
+			children = (
+				43098B682BCD887000D3F2F7 /* Toledo2024Tests.swift */,
+			);
+			path = Toledo2024Tests;
+			sourceTree = "<group>";
+		};
+		43098B712BCD887000D3F2F7 /* Toledo2024UITests */ = {
+			isa = PBXGroup;
+			children = (
+				43098B722BCD887000D3F2F7 /* Toledo2024UITests.swift */,
+				43098B742BCD887000D3F2F7 /* Toledo2024UITestsLaunchTests.swift */,
+			);
+			path = Toledo2024UITests;
+			sourceTree = "<group>";
+		};
+		43098B812BCD895600D3F2F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43098B822BCD89CC00D3F2F7 /* Task.swift */,
+				43098B842BCD8CDF00D3F2F7 /* TaskGroup.swift */,
+				43098B862BCD8F0000D3F2F7 /* TaskSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43098B522BCD886D00D3F2F7 /* Toledo2024 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43098B782BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024" */;
+			buildPhases = (
+				43098B4F2BCD886D00D3F2F7 /* Sources */,
+				43098B502BCD886D00D3F2F7 /* Frameworks */,
+				43098B512BCD886D00D3F2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toledo2024;
+			productName = Toledo2024;
+			productReference = 43098B532BCD886D00D3F2F7 /* Toledo2024.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43098B632BCD887000D3F2F7 /* Toledo2024Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43098B7B2BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024Tests" */;
+			buildPhases = (
+				43098B602BCD887000D3F2F7 /* Sources */,
+				43098B612BCD887000D3F2F7 /* Frameworks */,
+				43098B622BCD887000D3F2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43098B662BCD887000D3F2F7 /* PBXTargetDependency */,
+			);
+			name = Toledo2024Tests;
+			productName = Toledo2024Tests;
+			productReference = 43098B642BCD887000D3F2F7 /* Toledo2024Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43098B6D2BCD887000D3F2F7 /* Toledo2024UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43098B7E2BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024UITests" */;
+			buildPhases = (
+				43098B6A2BCD887000D3F2F7 /* Sources */,
+				43098B6B2BCD887000D3F2F7 /* Frameworks */,
+				43098B6C2BCD887000D3F2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43098B702BCD887000D3F2F7 /* PBXTargetDependency */,
+			);
+			name = Toledo2024UITests;
+			productName = Toledo2024UITests;
+			productReference = 43098B6E2BCD887000D3F2F7 /* Toledo2024UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43098B4B2BCD886D00D3F2F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					43098B522BCD886D00D3F2F7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					43098B632BCD887000D3F2F7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 43098B522BCD886D00D3F2F7;
+					};
+					43098B6D2BCD887000D3F2F7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 43098B522BCD886D00D3F2F7;
+					};
+				};
+			};
+			buildConfigurationList = 43098B4E2BCD886D00D3F2F7 /* Build configuration list for PBXProject "Toledo2024" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43098B4A2BCD886D00D3F2F7;
+			productRefGroup = 43098B542BCD886D00D3F2F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43098B522BCD886D00D3F2F7 /* Toledo2024 */,
+				43098B632BCD887000D3F2F7 /* Toledo2024Tests */,
+				43098B6D2BCD887000D3F2F7 /* Toledo2024UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43098B512BCD886D00D3F2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43098B5E2BCD886F00D3F2F7 /* Preview Assets.xcassets in Resources */,
+				43098B5B2BCD886F00D3F2F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B622BCD887000D3F2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B6C2BCD887000D3F2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43098B4F2BCD886D00D3F2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43853D832BCFE6BF002C9B79 /* TaskView.swift in Sources */,
+				43098B8B2BCDA7A200D3F2F7 /* TaskListView.swift in Sources */,
+				43098B592BCD886D00D3F2F7 /* ContentView.swift in Sources */,
+				43098B832BCD89CC00D3F2F7 /* Task.swift in Sources */,
+				43098B872BCD8F0000D3F2F7 /* TaskSection.swift in Sources */,
+				43098B852BCD8CDF00D3F2F7 /* TaskGroup.swift in Sources */,
+				43853D812BCFE35A002C9B79 /* StaticTaskListView.swift in Sources */,
+				43098B572BCD886D00D3F2F7 /* Toledo2024App.swift in Sources */,
+				43098B892BCDA77900D3F2F7 /* SidebarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B602BCD887000D3F2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43098B692BCD887000D3F2F7 /* Toledo2024Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43098B6A2BCD887000D3F2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43098B732BCD887000D3F2F7 /* Toledo2024UITests.swift in Sources */,
+				43098B752BCD887000D3F2F7 /* Toledo2024UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43098B662BCD887000D3F2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43098B522BCD886D00D3F2F7 /* Toledo2024 */;
+			targetProxy = 43098B652BCD887000D3F2F7 /* PBXContainerItemProxy */;
+		};
+		43098B702BCD887000D3F2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43098B522BCD886D00D3F2F7 /* Toledo2024 */;
+			targetProxy = 43098B6F2BCD887000D3F2F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		43098B762BCD887000D3F2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43098B772BCD887000D3F2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		43098B792BCD887000D3F2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Toledo2024/Toledo2024.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Toledo2024/Preview Content\"";
+				DEVELOPMENT_TEAM = ZW83P33SEZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		43098B7A2BCD887000D3F2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Toledo2024/Toledo2024.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Toledo2024/Preview Content\"";
+				DEVELOPMENT_TEAM = ZW83P33SEZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		43098B7C2BCD887000D3F2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toledo2024.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Toledo2024";
+			};
+			name = Debug;
+		};
+		43098B7D2BCD887000D3F2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toledo2024.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Toledo2024";
+			};
+			name = Release;
+		};
+		43098B7F2BCD887000D3F2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Toledo2024;
+			};
+			name = Debug;
+		};
+		43098B802BCD887000D3F2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garrio.Toledo2024UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Toledo2024;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43098B4E2BCD886D00D3F2F7 /* Build configuration list for PBXProject "Toledo2024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43098B762BCD887000D3F2F7 /* Debug */,
+				43098B772BCD887000D3F2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43098B782BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43098B792BCD887000D3F2F7 /* Debug */,
+				43098B7A2BCD887000D3F2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43098B7B2BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43098B7C2BCD887000D3F2F7 /* Debug */,
+				43098B7D2BCD887000D3F2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43098B7E2BCD887000D3F2F7 /* Build configuration list for PBXNativeTarget "Toledo2024UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43098B7F2BCD887000D3F2F7 /* Debug */,
+				43098B802BCD887000D3F2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43098B4B2BCD886D00D3F2F7 /* Project object */;
+}
