@@ -11,14 +11,12 @@ struct ContentView: View {
     
     @State private var userCreatedGroups: [TaskGroup] = TaskGroup.examples()
     @State private var allTasks = Task.examples()
-    @State private var selection: TaskSection? = TaskSection.all // nil for phone (stacked)
+    @State private var selection: TaskSection? = TaskSection.initialValue
     @State private var searchTerm: String = ""
     
     var body: some View {
         NavigationSplitView {
             SidebarView(userCreatedGroups: $userCreatedGroups, selection: $selection)
-//                .searchable(text: $searchText, placement: .sidebar)
-                .searchable(text: $searchTerm)
         } detail: {
             if searchTerm.isEmpty {
                 switch selection {
@@ -38,6 +36,7 @@ struct ContentView: View {
 
             }
         }
+        .searchable(text: $searchTerm)
     }
 }
 

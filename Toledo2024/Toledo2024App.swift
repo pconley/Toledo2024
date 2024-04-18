@@ -27,5 +27,19 @@ struct Toledo2024App: App {
                 }
             }
         }
+        
+        #if os(macOS)
+        
+        Settings {
+            Text("Settings").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+        }
+        
+        MenuBarExtra("Todo") {
+            Button("To do something"){
+                
+            }
+        }
+        
+        #endif
     }
 }

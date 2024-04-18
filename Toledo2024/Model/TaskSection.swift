@@ -51,4 +51,13 @@ enum TaskSection: Identifiable, CaseIterable, Hashable {
     static func == (lhs: TaskSection, rhs: TaskSection) -> Bool {
         lhs.id == rhs.id
     }
+    
+    static var initialValue: TaskSection? {
+        #if os(macOS)
+            TaskSection.all
+        #else
+            nil
+        #endif
+    }
+
 }

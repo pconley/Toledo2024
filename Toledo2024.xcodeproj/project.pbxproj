@@ -21,6 +21,11 @@
 		43098B8B2BCDA7A200D3F2F7 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */; };
 		43853D812BCFE35A002C9B79 /* StaticTaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */; };
 		43853D832BCFE6BF002C9B79 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D822BCFE6BF002C9B79 /* TaskView.swift */; };
+		43853D862BD00EFD002C9B79 /* Toledo2024.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43853D842BD00EFD002C9B79 /* Toledo2024.xcdatamodeld */; };
+		43853D892BD01488002C9B79 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D882BD01488002C9B79 /* TaskRow.swift */; };
+		43853D8C2BD022EF002C9B79 /* CDTask+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D8B2BD022EF002C9B79 /* CDTask+helper.swift */; };
+		43853D8E2BD02464002C9B79 /* CDTaskGroup+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D8D2BD02464002C9B79 /* CDTaskGroup+helper.swift */; };
+		43853D902BD02846002C9B79 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853D8F2BD02846002C9B79 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTaskListView.swift; sourceTree = "<group>"; };
 		43853D822BCFE6BF002C9B79 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		43853D852BD00EFD002C9B79 /* Toledo2024.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Toledo2024.xcdatamodel; sourceTree = "<group>"; };
+		43853D882BD01488002C9B79 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		43853D8B2BD022EF002C9B79 /* CDTask+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTask+helper.swift"; sourceTree = "<group>"; };
+		43853D8D2BD02464002C9B79 /* CDTaskGroup+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTaskGroup+helper.swift"; sourceTree = "<group>"; };
+		43853D8F2BD02846002C9B79 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,16 +119,19 @@
 		43098B552BCD886D00D3F2F7 /* Toledo2024 */ = {
 			isa = PBXGroup;
 			children = (
+				43853D8A2BD02227002C9B79 /* Core Data */,
 				43098B562BCD886D00D3F2F7 /* Toledo2024App.swift */,
 				43098B582BCD886D00D3F2F7 /* ContentView.swift */,
 				43098B882BCDA77900D3F2F7 /* SidebarView.swift */,
 				43853D822BCFE6BF002C9B79 /* TaskView.swift */,
 				43098B8A2BCDA7A200D3F2F7 /* TaskListView.swift */,
 				43853D802BCFE35A002C9B79 /* StaticTaskListView.swift */,
+				43853D872BD0144E002C9B79 /* View */,
 				43098B812BCD895600D3F2F7 /* Model */,
 				43098B5A2BCD886F00D3F2F7 /* Assets.xcassets */,
 				43098B5F2BCD886F00D3F2F7 /* Toledo2024.entitlements */,
 				43098B5C2BCD886F00D3F2F7 /* Preview Content */,
+				43853D842BD00EFD002C9B79 /* Toledo2024.xcdatamodeld */,
 			);
 			path = Toledo2024;
 			sourceTree = "<group>";
@@ -156,6 +169,24 @@
 				43098B862BCD8F0000D3F2F7 /* TaskSection.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		43853D872BD0144E002C9B79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43853D882BD01488002C9B79 /* TaskRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43853D8A2BD02227002C9B79 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				43853D8B2BD022EF002C9B79 /* CDTask+helper.swift */,
+				43853D8D2BD02464002C9B79 /* CDTaskGroup+helper.swift */,
+				43853D8F2BD02846002C9B79 /* PersistenceController.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +320,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				43853D832BCFE6BF002C9B79 /* TaskView.swift in Sources */,
+				43853D902BD02846002C9B79 /* PersistenceController.swift in Sources */,
 				43098B8B2BCDA7A200D3F2F7 /* TaskListView.swift in Sources */,
+				43853D862BD00EFD002C9B79 /* Toledo2024.xcdatamodeld in Sources */,
+				43853D8C2BD022EF002C9B79 /* CDTask+helper.swift in Sources */,
 				43098B592BCD886D00D3F2F7 /* ContentView.swift in Sources */,
 				43098B832BCD89CC00D3F2F7 /* Task.swift in Sources */,
 				43098B872BCD8F0000D3F2F7 /* TaskSection.swift in Sources */,
 				43098B852BCD8CDF00D3F2F7 /* TaskGroup.swift in Sources */,
 				43853D812BCFE35A002C9B79 /* StaticTaskListView.swift in Sources */,
+				43853D892BD01488002C9B79 /* TaskRow.swift in Sources */,
+				43853D8E2BD02464002C9B79 /* CDTaskGroup+helper.swift in Sources */,
 				43098B572BCD886D00D3F2F7 /* Toledo2024App.swift in Sources */,
 				43098B892BCDA77900D3F2F7 /* SidebarView.swift in Sources */,
 			);
@@ -617,6 +653,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43853D842BD00EFD002C9B79 /* Toledo2024.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43853D852BD00EFD002C9B79 /* Toledo2024.xcdatamodel */,
+			);
+			currentVersion = 43853D852BD00EFD002C9B79 /* Toledo2024.xcdatamodel */;
+			name = Toledo2024.xcdatamodeld;
+			path = /Users/pat/Projects/Toledo2024/Toledo2024/Toledo2024/Toledo2024.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 43098B4B2BCD886D00D3F2F7 /* Project object */;
 }
