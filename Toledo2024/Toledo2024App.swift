@@ -9,16 +9,19 @@ import SwiftUI
 
 @main
 struct Toledo2024App: App {
+    
+    let persistentController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, persistentController.container.viewContext)
         }
         .commands {
             CommandMenu("Tasks") {
                 Button("Add new task") {
                     
                 }
-                .keyboardShortcut(KeyEquivalent("r"), modifiers: /*@START_MENU_TOKEN@*/.command/*@END_MENU_TOKEN@*/)
+                .keyboardShortcut(KeyEquivalent("r"), modifiers: .command)
             }
             
             CommandGroup(after: .newItem) {

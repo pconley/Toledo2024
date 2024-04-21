@@ -21,6 +21,5 @@ struct TaskRow: View {
 }
 
 #Preview {
-//    Text(CDTask.example.title)
-    TaskRow(task: CDTask.example)
+    TaskRow(task: CDTask.example).padding()
 }

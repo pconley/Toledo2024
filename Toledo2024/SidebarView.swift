@@ -9,7 +9,10 @@ import SwiftUI
 
 struct SidebarView: View {
     
-    @Binding var userCreatedGroups: [TaskGroup]
+    @Environment(\.managedObjectContext) var context
+    
+    @FetchRequest(fetchRequest: CDTaskGroup.fetch(), animation: .bouncy) var taskGroups: FetchedResults<CDTaskGroup>
+    
     @Binding var selection: TaskSection?
     
     var body: some View {
@@ -22,31 +25,21 @@ struct SidebarView: View {
             }
         
             Section ("Your Groups"){
-                ForEach($userCreatedGroups){ $group in
-                    HStack {
-                        Image(systemName: "folder")
-                        TextField("New Group", text: $group.title)
-                    }
+                ForEach(taskGroups){ group in
+                    TaskGroupRow(taskGroup: group)
                     .tag(TaskSection.list(group))
                     .contextMenu {
                         Button("Delete", role: .destructive){
-//                            if let index = userCreatedGroups.firstIndex(where: {$0.id == group.id}) {
-//                                userCreatedGroups.remove(at: index)
-//                            }
-                            let ndx = userCreatedGroups.firstIndex(where: {$0.id == group.id})
-                            if ndx != nil {
-                                userCreatedGroups.remove(at: ndx!) //unwrapped????
+                            CDTaskGroup.delete(taskGroup: group)
                             }
-                        }
                     }
                 }
             }
         }.safeAreaInset(edge: .bottom) {
             Button (action: {
-                let newGroup = TaskGroup(title: "New Group")
-                userCreatedGroups.append(newGroup)
+                _ = CDTaskGroup(title: "New", context: context)
             }, label: {
-                Label("Add Button", systemImage: "plus.circle")
+                Label("Add Group", systemImage: "plus.circle")
             })
             .buttonStyle(.borderless)
             .foregroundColor(.accentColor)
@@ -59,8 +52,12 @@ struct SidebarView: View {
 
 #Preview {
     SidebarView(
-        userCreatedGroups: .constant(TaskGroup.examples()),
         selection: .constant(.all)
-    ).listStyle(.sidebar)
+    )
+    .listStyle(.sidebar)
+    .environment(
+        \.managedObjectContext,
+        PersistenceController.preview.container.viewContext
+    )
 }
 

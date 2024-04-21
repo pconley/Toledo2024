@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let persistentController = PersistenceController.shared
+    
     @State private var userCreatedGroups: [TaskGroup] = TaskGroup.examples()
     @State private var allTasks = Task.examples()
     @State private var selection: TaskSection? = TaskSection.initialValue
@@ -16,18 +18,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationSplitView {
-            SidebarView(userCreatedGroups: $userCreatedGroups, selection: $selection)
+            SidebarView(selection: $selection)
         } detail: {
             if searchTerm.isEmpty {
                 switch selection {
-                case .all:
-                    TaskListView(title: "All", tasks: $allTasks)
-                case .done:
-                    StaticTaskListView(title: "Done", tasks: allTasks.filter({$0.isCompleted}))
-                case .upcoming:
-                    StaticTaskListView(title: "Open", tasks: allTasks.filter({!$0.isCompleted}))
+                case .all, .done, .upcoming:
+                    // FIXME: "all" shows as the title for all 3 selectins
+                    TaskListView(title: "All", selection: selection)
                 case .list(let TaskGroup):
-                    StaticTaskListView(title: TaskGroup.title, tasks: TaskGroup.tasks)
+                      Text("placeholder for list")
                 case .none:
                     Text("none")
                 }
@@ -42,4 +41,8 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(
+            \.managedObjectContext,
+            PersistenceController.preview.container.viewContext
+        )
 }

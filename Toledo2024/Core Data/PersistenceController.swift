@@ -31,13 +31,18 @@ struct PersistenceController {
     
     //MARK: - SwiftUI preview helper
     
-    static var preview: PersistenceController {
-        let controller = PersistenceController(inMemory: true)
-//        let context = controller.container.viewContext
-//        for index in 0..<10 {
-//            let task = CDTask(title: "new task \(index)", dueDate: Date(), context: context)
-//        }
+    static var preview: PersistenceController = {
+       let controller = PersistenceController(inMemory: true)
+       let context = controller.container.viewContext
+        
+        for index in 0..<10 {
+            let task = CDTask(title: "some new task \(index)", dueDate: Date(), context: context)
+        }
+        
+        let doneTask = CDTask(title: "A done task", dueDate: Date(), context: context)
+        doneTask.isCompleted.toggle()
+        
         return controller
-    }
+    }()
     
 }
