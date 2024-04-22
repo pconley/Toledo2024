@@ -11,11 +11,11 @@ import CoreData
 extension CDTask {
     
     var uuid: UUID {
-        #if DEBUG
+#if DEBUG
         uuid_!
-        #else
+#else
         uuid_ ?? UUID()
-        #endif
+#endif
     }
     
     var title: String {
@@ -28,10 +28,10 @@ extension CDTask {
         set { dueDate_ = newValue }
     }
     
-//    var subTasks: Set<CDTask> {
-//        get { (subTasks_ as? Set<CDTask>) ?? [] }
-//        set { subTasks_ = newValue as NSSet }
-//    }
+    var subTasks: Set<CDTask> {
+        get { (subTasks_ as? Set<CDTask>) ?? [] }
+        set { subTasks_ = newValue as NSSet }
+    }
     
     convenience init(title: String,
                      dueDate: Date,
@@ -64,19 +64,17 @@ extension CDTask {
     static var example: CDTask {
         let context = PersistenceController.preview.container.viewContext
         let task = CDTask(title: "Buy Dog Food", dueDate: Date(), context: context)
-//        let sub1 = CDTask(title: "Subtask 1", dueDate: Date(), context: context)
-//        let sub2 = CDTask(title: "Subtask 2", dueDate: Date(), context: context)
-//        let sub3 = CDTask(title: "Subtask 3", dueDate: Date(), context: context)
-//        task.subTasks.formUnion([sub1, sub2, sub3])
+        let sub1 = CDTask(title: "Subtask 1", dueDate: Date(), context: context)
+        let sub2 = CDTask(title: "Subtask 2", dueDate: Date(), context: context)
+        let sub3 = CDTask(title: "Subtask 3", dueDate: Date(), context: context)
+        task.subTasks.formUnion([sub1, sub2, sub3])
         return task
     }
-    
 }
+    
 
-//extension CDTask: Comparable {
-//    public static func < (lhs: CDTask, rhs: CDTask) -> Bool {
-//        lhs.title < rhs.title
-//    }
-//    
-//    
-//}
+extension CDTask: Comparable {
+    public static func < (lhs: CDTask, rhs: CDTask) -> Bool {
+        lhs.title < rhs.title
+    }
+}

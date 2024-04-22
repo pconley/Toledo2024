@@ -27,10 +27,10 @@ extension CDTaskGroup {
         createdAt_ ?? Date()
     }
     
-//    var tasks: Set<CDTask> {
-//        get { (tasks_ as? Set<CDTask>) ?? [] }
-//        set { tasks_ = newValue as NSSet }
-//    }
+    var tasks: Set<CDTask> {
+        get { (tasks_ as? Set<CDTask>) ?? [] }
+        set { tasks_ = newValue as NSSet }
+    }
     
     convenience init(title: String, context: NSManagedObjectContext) {
         self.init(context: context)
@@ -64,7 +64,7 @@ extension CDTaskGroup {
         let context = PersistenceController.preview.container.viewContext
         let taskGroup = CDTaskGroup(title: "Groceries", context: context)
         
-//        taskGroup.tasks.insert(CDTask.example)
+        taskGroup.tasks.insert(CDTask.example)
         
         return taskGroup
     }

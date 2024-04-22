@@ -11,10 +11,17 @@ import SwiftUI
 struct Toledo2024App: App {
     
     let persistentController = PersistenceController.shared
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environment(\.managedObjectContext, persistentController.container.viewContext)
+            ContentView()
+                .environment(\.managedObjectContext, persistentController.container.viewContext)
+                .onChange(of: scenePhase) { oldValue, newValue in
+                    if newValue == .background {
+                        persistentController.save()
+                    }
+                }
         }
         .commands {
             CommandMenu("Tasks") {
@@ -28,6 +35,10 @@ struct Toledo2024App: App {
                 Button("Add new group") {
                     
                 }
+                Button("Save") {
+                    persistentController.save()
+                }
+                .keyboardShortcut(KeyEquivalent("s"), modifiers: .command)
             }
         }
         

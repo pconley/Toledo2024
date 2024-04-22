@@ -29,18 +29,38 @@ struct PersistenceController {
         }
     }
     
+    func save() {
+        let context = container.viewContext
+        
+        guard context.hasChanges else { return }
+        
+        do {
+            try context.save()
+            print("saved!")
+        } catch {
+            print("error saving context: \(error)")
+        }
+    }
+    
     //MARK: - SwiftUI preview helper
     
     static var preview: PersistenceController = {
        let controller = PersistenceController(inMemory: true)
        let context = controller.container.viewContext
         
-        for index in 0..<10 {
+        for index in 0..<5 {
             let task = CDTask(title: "some new task \(index)", dueDate: Date(), context: context)
         }
         
         let doneTask = CDTask(title: "A done task", dueDate: Date(), context: context)
         doneTask.isCompleted.toggle()
+        
+        
+        let multiStepTask = CDTask(title: "Take 3 steps", dueDate: Date(), context: context)
+        let sub1 = CDTask(title: "Subtask 1", dueDate: Date(), context: context)
+        let sub2 = CDTask(title: "Subtask 2", dueDate: Date(), context: context)
+        let sub3 = CDTask(title: "Subtask 3", dueDate: Date(), context: context)
+        multiStepTask.subTasks.formUnion([sub1, sub2, sub3])
         
         return controller
     }()
